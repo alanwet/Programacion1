@@ -1,0 +1,19 @@
+----Primer avance catalogo----
+
+CANT_PRODUCTOS = 6
+
+codigos = [0] * CANT_PRODUCTOS
+nombres = [""] * CANT_PRODUCTOS
+precios = [0] * CANT_PRODUCTOS
+
+for i in range(CANT_PRODUCTOS):
+    codigo = int(input("Ingrese el código: "))
+
+    while codigo == 0 or codigo in codigos:
+        codigo = int(input("Código inválido o repetido. Ingrese otro: "))
+
+    codigos[i] = codigo
+    nombres[i] = input("Ingrese el nombre: ")
+    precios[i] = int(input("Ingrese el precio: "))
+
+print("Catálogo cargado correctamente")
